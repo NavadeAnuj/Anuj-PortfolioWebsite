@@ -1,16 +1,50 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section className="min-h-screen p-4 md:p-8 bg-gray-900 text-white">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="min-h-screen p-4 md:p-8 bg-gray-900 text-white"
+    >
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-center md:text-left">About Me</h1>
-        <p className="mb-8 text-lg text-center md:text-left">
+        <motion.h1
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-4xl font-bold mb-8 text-center md:text-left"
+        >
+          About Me
+        </motion.h1>
+        <motion.p
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="mb-8 text-lg text-center md:text-left"
+        >
           Hi, I'm Anuj Navade, a passionate developer with expertise in ReactJS and a love for creating innovative solutions. I have a strong background in computer applications and a deep interest in technology and creativity.
-        </p>
-        <h2 className="text-3xl font-bold mb-4 text-center md:text-left">Education</h2>
-        <ul className="space-y-4">
-          <li>
+        </motion.p>
+        <motion.h2
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.6 }}
+          className="text-3xl font-bold mb-4 text-center md:text-left"
+        >
+          Education
+        </motion.h2>
+        <motion.ul
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.9, duration: 0.6 }}
+          className="space-y-4"
+        >
+          <motion.li
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.6 }}
+          >
             <div className="flex flex-col md:flex-row justify-between">
               <div>
                 <h3 className="text-xl font-bold">Bachelor of Computer Applications (BCA)</h3>
@@ -19,8 +53,12 @@ const About = () => {
               <div className="text-gray-400">2021-2024</div>
             </div>
             <p className="text-gray-300">Relevant coursework: Programming, Web Development, Database Management, and more.</p>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.3, duration: 0.6 }}
+          >
             <div className="flex flex-col md:flex-row justify-between">
               <div>
                 <h3 className="text-xl font-bold">High School</h3>
@@ -29,10 +67,10 @@ const About = () => {
               <div className="text-gray-400">2020-2021</div>
             </div>
             <p className="text-gray-300">Relevant coursework: Mathematics, Physics, Computer Science, and more.</p>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
