@@ -8,23 +8,24 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="bg-gray-800 p-4">
       <div className="flex justify-between items-center">
         <div className="flex-1 flex justify-center items-center">
-          <ul className={`mt-4 md:flex md:space-x-8 md:mt-0 ${isOpen ? 'block' : 'hidden'} md:flex-row space-y-2 md:space-y-0`}>
+          <ul className={`mt-4 md:flex md:space-x-8 md:mt-0 ${isOpen ? 'flex flex-col md:flex-row space-y-2 md:space-y-0' : 'hidden md:flex'}`}>
             <li className="text-white">
-              <Link to="/" className="block py-2 md:py-0">Home</Link>
+              <Link to="/" className="block py-2 md:py-0" onClick={closeNavbar}>Home</Link>
             </li>
             <li className="text-white">
-              <Link to="/about" className="block py-2 md:py-0">About</Link>
+              <Link to="/about" className="block py-2 md:py-0" onClick={closeNavbar}>About</Link>
             </li>
             <li className="text-white">
-              <Link to="/experience" className="block py-2 md:py-0">Experience</Link>
+              <Link to="/experience" className="block py-2 md:py-0" onClick={closeNavbar}>Experience</Link>
             </li>
-            {/* <li className="text-white">
-              <Link to="/experience" className="block py-2 md:py-0">Experience</Link>
-            </li> */}
           </ul>
         </div>
         <button onClick={toggleNavbar} className="md:hidden text-white focus:outline-none">
