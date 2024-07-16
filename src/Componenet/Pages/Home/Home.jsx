@@ -12,7 +12,7 @@ const Home = () => {
         <div className="w-full md:w-2/3 text-center md:text-left">
           <h1 className="text-3xl md:text-4xl font-bold">Welcome to My Portfolio</h1>
           <p className="mt-4 text-lg">
-            Hi, I'm [Your Name], a passionate developer with expertise in ReactJS and a love for creating innovative solutions. Welcome to my personal portfolio website.
+            Hi, I'm Anuj Navade, a passionate developer with expertise in ReactJS and a love for creating innovative solutions. Welcome to my personal portfolio website.
           </p>
         </div>
       </section>
