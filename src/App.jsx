@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Componenet/Navbar/Navbar';
 import Home from './Componenet/Pages/Home/Home';
-import About from './Componenet/Pages/About/About';
 import Projects from './Componenet/Pages/Projects/Projects';
+import About from './Componenet/Pages/About/About';
+import Experience from './Componenet/Pages/Experiences/experiences';
 
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/experience" element={<Experience />} />
         {/* <Route path="/experience" element={<Experience />} /> */}
       </Routes>
     </Router>

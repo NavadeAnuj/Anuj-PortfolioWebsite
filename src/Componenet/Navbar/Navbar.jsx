@@ -20,11 +20,11 @@ const Navbar = () => {
               <Link to="/about" className="block py-2 md:py-0">About</Link>
             </li>
             <li className="text-white">
-              <Link to="/projects" className="block py-2 md:py-0">Projects</Link>
-            </li>
-            <li className="text-white">
               <Link to="/experience" className="block py-2 md:py-0">Experience</Link>
             </li>
+            {/* <li className="text-white">
+              <Link to="/experience" className="block py-2 md:py-0">Experience</Link>
+            </li> */}
           </ul>
         </div>
         <button onClick={toggleNavbar} className="md:hidden text-white focus:outline-none">
